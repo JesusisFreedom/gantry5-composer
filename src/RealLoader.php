@@ -69,14 +69,15 @@ abstract class RealLoader
         $base = __DIR__;
 
         // Initialize auto-loading.
-        if (!file_exists($base . '/vendor/autoload.php')) {
-            throw new \LogicException('Please run composer in Gantry 5 Library!');
+        if (!file_exists(ABSPATH . '/vendor/autoload.php')) {
+          throw new \LogicException('Please run composer in Gantry 5 Library!');
         }
 
         /** @var \Composer\Autoload\ClassLoader $loader */
-        $loader = require_once $base . '/vendor/autoload.php';
+        $loader = require_once ABSPATH . '/vendor/autoload.php';
 
         $dev = is_dir($base . '/platforms');
+
 
         // Register platform specific overrides.
         if (defined('JVERSION') && defined('JPATH_ROOT')) {
