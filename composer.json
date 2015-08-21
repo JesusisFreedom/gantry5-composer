@@ -1,6 +1,6 @@
 {
   "name": "gantry5-composer",
-  "version": "5.1.0@dev",
+  "version": "5.1.0",
   "type": "wordpress-plugin",
   "description": "Gantry Framework Library",
   "license": "MIT",
